@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1316</width>
+    <height>647</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>1121</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QCustomPlot" name="plot" native="true"/>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCustomPlot" name="plot2" native="true"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QRadioButton" name="fileModeButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>146</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>File Mode</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="audioInputModeButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>146</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>AudioInput Mode</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>79</y>
+      <width>151</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1316</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTransfromation">
+    <property name="title">
+     <string>Transfromation</string>
+    </property>
+    <addaction name="actionFFT"/>
+    <addaction name="actionFFThc"/>
+    <addaction name="actionFHT"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuTransfromation"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionOpen_Efficency_Window">
+   <property name="text">
+    <string>Open Efficency Window</string>
+   </property>
+  </action>
+  <action name="actionnaiveDFT">
+   <property name="text">
+    <string>naiveDFT</string>
+   </property>
+  </action>
+  <action name="actionFFT">
+   <property name="text">
+    <string>FFT</string>
+   </property>
+  </action>
+  <action name="actionFFThc">
+   <property name="text">
+    <string>FFThc</string>
+   </property>
+  </action>
+  <action name="actionFHT">
+   <property name="text">
+    <string>FHT</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot/qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
